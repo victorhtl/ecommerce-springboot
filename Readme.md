@@ -1,11 +1,16 @@
 # About
 I've been working in this application to improve my knowledge in spring boot, API Rest and databases<br>
+## Run
+- git clone the project
+- Open with intellij
+- Configure java 21
+- Run the Application.java file
 ## Development
 This is the domain model for our back-end application
 <img src="img_doc/domain_model.png">
 The technologies used were:
-- Java
-- Springboot
+- Java 21
+- Springboot 3.2.4
 - JPA/Hibernate
 - Maven
 ## EndPoints
