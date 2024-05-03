@@ -1,5 +1,27 @@
-Search for how to document a REST API and make one<br>
-This will serve as foundation for a project (I don't know what) with a frontend<br>
-Utilizar as imagens do projeto aqui
+# About
+I've been working in this application to improve my knowledge in spring boot, API Rest and databases<br>
+## Development
+This is the domain model for our back-end application
 <img src="img_doc/domain_model.png">
-# EndPoints
+The technologies used were:
+- Java
+- Springboot
+- JPA/Hibernate
+- Maven
+## EndPoints
+The endpoints communicate via JSON<br>
+GET /users
+POST /users
+GET /orders
+GET /categories
+GET /product
+GET /OrderItem
+## 
+## Future commits
+- Implement access authentication 
+- Implement user login and sign up
+- Implement client-side interface with
+- Implement an interface for admin area
+- Images in products
+- Implements search box for products
+- Implement postgreSQL
