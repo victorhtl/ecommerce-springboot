@@ -5,6 +5,7 @@ I've been working in this application to improve my knowledge in spring boot, AP
 - Open with intellij
 - Configure java 21
 - Run the Application.java file
+- The program will automatically add some itens into the database
 ## Development
 This is the domain model for our back-end application
 <img src="img_doc/domain_model.png">
@@ -15,12 +16,12 @@ The technologies used were:
 - Maven
 ## EndPoints
 The endpoints communicate via JSON<br>
-GET /users
-POST /users
-GET /orders
-GET /categories
-GET /product
-GET /OrderItem
+GET /users<br>
+POST /users<br>
+GET /orders<br>
+GET /categories<br>
+GET /product<br>
+GET /OrderItem<br>
 ## 
 ## Future commits
 - Implement access authentication 
