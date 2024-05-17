@@ -1,9 +1,7 @@
-package com.course.spring.resources;
+package com.course.spring.controller;
 
 import com.course.spring.entities.Category;
-import com.course.spring.entities.Product;
 import com.course.spring.services.CategoryService;
-import com.course.spring.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,22 +12,22 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="/product")
-public class ProductResource {
+@RequestMapping(value="/category")
+public class CategoryResource {
 
     @Autowired // Injeção de dependência automática
-    private ProductService productService;
+    private CategoryService categories;
 
     // endpoint
     @GetMapping
-    public ResponseEntity<List<Product>> findAll(){
-        List<Product> productList = productService.findAll();
-        return ResponseEntity.ok().body(productList);
+    public ResponseEntity<List<Category>> findAll(){
+        List<Category> categoriesList = categories.findAll();
+        return ResponseEntity.ok().body(categoriesList);
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Product> findById(@PathVariable Long id){
-        Product product = productService.findById(id);
-        return ResponseEntity.ok().body(product);
+    public ResponseEntity<Category> findById(@PathVariable Long id){
+        Category category = categories.findById(id);
+        return ResponseEntity.ok().body(category);
     }
 }

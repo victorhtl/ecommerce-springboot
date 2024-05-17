@@ -1,4 +1,4 @@
-package com.course.spring.resources.exceptions;
+package com.course.spring.controller.exceptions;
 
 import com.course.spring.services.exceptions.DatabaseException;
 import com.course.spring.services.exceptions.ResourceNotFoundException;

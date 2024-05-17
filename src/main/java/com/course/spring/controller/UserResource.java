@@ -1,4 +1,4 @@
-package com.course.spring.resources;
+package com.course.spring.controller;
 
 import com.course.spring.entities.User;
 import com.course.spring.services.UserService;

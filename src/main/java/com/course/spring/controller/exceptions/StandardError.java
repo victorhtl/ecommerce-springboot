@@ -1,4 +1,4 @@
-package com.course.spring.resources.exceptions;
+package com.course.spring.controller.exceptions;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
