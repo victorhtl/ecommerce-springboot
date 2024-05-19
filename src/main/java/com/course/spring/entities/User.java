@@ -3,7 +3,6 @@ package com.course.spring.entities;
 import com.course.spring.entities.enums.UserRole;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import org.springframework.boot.autoconfigure.task.TaskExecutionProperties;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -21,7 +20,7 @@ public class User implements Serializable, UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String userName;
+    private String login;
     private String email;
     private String phone;
     private String password;
@@ -35,13 +34,15 @@ public class User implements Serializable, UserDetails {
 
     public User(){}
 
-    public User(Long id, String userName, String email, String phone, String password) {
+    public User(Long id, String login, String email, String phone, String password) {
         this.id = id;
-        this.userName = userName;
+        this.login = login;
         this.email = email;
         this.phone = phone;
         this.password = password;
     }
+
+    UserDetails finByLogin(String login) { return login; }
 
     public Long getId() {
         return id;
@@ -51,12 +52,12 @@ public class User implements Serializable, UserDetails {
         this.id = id;
     }
 
-    public String getName() {
-        return userName;
+    public String getLogin() {
+        return login;
     }
 
-    public void setName(String name) {
-        this.userName = userName;
+    public void setLogin(String name) {
+        this.login = login;
     }
 
     public String getEmail() {
@@ -87,7 +88,7 @@ public class User implements Serializable, UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return login;
     }
 
     @Override

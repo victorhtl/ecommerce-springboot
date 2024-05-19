@@ -1,5 +1,8 @@
 package com.course.spring.services;
 
+/*
+* This class acts between the controller and the database access*/
+
 import com.course.spring.entities.User;
 import com.course.spring.repositories.UserRepository;
 import com.course.spring.services.exceptions.DatabaseException;
@@ -7,7 +10,6 @@ import com.course.spring.services.exceptions.ResourceNotFoundException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -51,7 +53,7 @@ public class UserService {
     }
 
     public void updateData(User entity, User user){
-        entity.setName(user.getName());
+        entity.setLogin(user.getLogin());
         entity.setEmail(user.getEmail());
         entity.setPhone(user.getPhone());
     }

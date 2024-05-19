@@ -75,3 +75,7 @@ check the database by the admin section of H2, in localhost:8080/h2-console
 - Images in products
 - Implements search box for products
 - Implement postgreSQL
+
+## Working on...
+Current working on access authentication using spring security with JWT tokens in branch feat-Authentication<br>
+The code not works properly yet.
